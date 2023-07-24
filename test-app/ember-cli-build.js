@@ -19,10 +19,16 @@ module.exports = function (defaults) {
           fromApp: '12',
           overrideAddon: 'from-app',
         },
-        'some-other-dependency': {
+        'ember-cli-babel': {
           debug: true,
-          style: 'postcss',
+          js: 'swc', // idk
         },
+
+        // can't set for dependencies that are not declared
+        // 'some-other-dependency': {
+        //   debug: true,
+        //   style: 'postcss',
+        // },
       },
     },
   });
