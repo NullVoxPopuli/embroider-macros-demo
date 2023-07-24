@@ -7,8 +7,23 @@ module.exports = function (defaults) {
     autoImport: {
       watchDependencies: ['test-config-macros'],
     },
+    '@embroider/macros': {
+      // configure app
+      setOwnConfig: {
+        foo: '34',
+      },
+
+      // configure dependencies
+      setConfig: {
+        'test-config-macros': {
+          fromApp: '12',
+          overrideAddon: 'from-app',
+        },
+      },
+    },
   });
 
-  const { maybeEmbroider } = require('@embroider/test-setup');
-  return maybeEmbroider(app);
+  // return app.toTree();
+  const { Webpack } = require('@embroider/webpack');
+  return require('@embroider/compat').compatBuild(app, Webpack);
 };
