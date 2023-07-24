@@ -19,6 +19,10 @@ module.exports = function (defaults) {
           fromApp: '12',
           overrideAddon: 'from-app',
         },
+        'some-other-dependency': {
+          debug: true,
+          style: 'postcss',
+        },
       },
     },
   });

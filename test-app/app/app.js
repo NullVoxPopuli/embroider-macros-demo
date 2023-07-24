@@ -22,9 +22,5 @@ console.log('from app', {
     fromApp: getConfig('fromApp'),
     overrideAddon: getConfig('overrideAddon'),
   },
-  getGlobalConfig: {
-    foo: getGlobalConfig('foo'),
-    fromApp: getGlobalConfig('fromApp'),
-    overrideAddon: getGlobalConfig('overrideAddon'),
-  },
+  getGlobalConfig: getGlobalConfig(),
 });
